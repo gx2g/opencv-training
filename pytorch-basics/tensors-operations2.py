@@ -33,11 +33,16 @@ B = torch.tensor([1.0, 2.0, 3.0])
 print("1 dimension", B)
 
 # 2 dimensions
-C = torch.tensor([[1.0, 2.0],[3.0, 4.0]])
+C = torch.tensor([
+    [1.0, 2.0],[3.0, 4.0]
+    ])
 print("2 dimensions", C)
 
 # 3 dimensions
-D = torch.tensor([[[1.0, 2.0],[3.0, 4.0]],[[5.0, 6.0], [7.0, 8.0]]])
+D = torch.tensor([
+    [[1.0, 2.0],[3.0, 4.0]], 
+    [[5.0, 6.0],[7.0, 8.0]]
+    ])
 print("3 dimensions", D)
 
 print("========================================")
@@ -45,7 +50,32 @@ print("========================================")
 
 # Create a Tensor with just ones in the column
 a = torch.ones(5)
-print(a)
+print("all ones", a)
 
 b = torch.zeros(5)
-print(b)
+print("all zeros", b)
+
+c = torch.tensor([1.0, 2.0, 3.0, 4.0, 5.0])
+print("custom values", c)
+
+d = torch.zeros(3,2)
+print("3 rows, 2 columns of zeros", d)
+
+e = torch.ones(3,2)
+print("3 rows, 2 columns of ones", e)
+
+
+f = torch.tensor([[1.0, 2.0], [3.0, 4.0]])
+print("2 demensions again", f)
+
+# 3D
+g = torch.tensor([
+    [[1., 2.], [3., 4.]], 
+    [[5., 6.], [7., 8.]]
+    ])
+print("3 demensions again", g)
+
+# shape method
+print(f.shape)
+print(e.shape)
+print(g.shape)
